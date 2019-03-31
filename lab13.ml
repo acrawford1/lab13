@@ -233,8 +233,9 @@ List.rev, and you've likely used it in previous exercises.)
 let reverse (lst : 'a list) : 'a list =
   let a =  ref lst in
   let result = ref [] in
-  while !a <> [] doresult := List.hd !a :: !result;
-  a := List.tl !a
+  while !a <> [] do
+    result := List.hd !a :: !result;
+    a := List.tl !a
 done;
 !result ;;
 
